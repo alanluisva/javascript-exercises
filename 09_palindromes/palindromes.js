@@ -7,8 +7,9 @@ const palindromes = function (string) {
     for (let i = string.length - 1; i >= 0; i--) {
         backwardsString += string[i];
     }
+    
 
-    if (string === backwardsString) {
+    if (string.replace("!", "") === backwardsString.replace("!", "")) {
         return true;
     } else {
         return false;
