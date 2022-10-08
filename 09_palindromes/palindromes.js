@@ -5,8 +5,8 @@ const palindromes = function (string) {
         backwardsString += string[i];
     }
 
-    let originalWord = string.replace("!", "").toLowerCase()
-    let backwardWord = backwardsString.replace("!", "").toLowerCase()
+    let originalWord = string.replace(/[,.!]/g, "").toLowerCase().replace(/\s/g, '')
+    let backwardWord = backwardsString.replace(/[,.!]/g, "").toLowerCase().replace(/\s/g, '')
 
     if (originalWord === backwardWord) {
         return true;
