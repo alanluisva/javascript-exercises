@@ -27,7 +27,12 @@ let sequence = {
 };
 
 const fibonacci = function (n) {
-    return sequence[n];
+    if (n < 0) {
+        return "OOPS"
+    } else {
+        return sequence[n];
+    }
+
 };
 
 // Do not edit below this line
